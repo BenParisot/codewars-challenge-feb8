@@ -1,18 +1,9 @@
-console.log('hello');
-
-// Create a function that returns the sum of the two lowest positive numbers given an array of minimum 4 integers. No floats or empty arrays will be passed.
-
-
-const numArray = [23, 1, 53, 48, 94, 16, 37];
-let sumArray = [];
-let num1 = null;
-let num2 = null;
-console.log(numArray);
-(Math.min(...numArray));
-
+const numArray = [23, 21, 53, 48, 4, 16, 23];
+lowSum();
 function lowSum() {
-    for(let index = 0; index < numArray.length; index++) {
-        
-
-    }
+    numArray.sort(function(a,b) {
+        return a - b;
+    });
+    const sum = numArray[0] + numArray[1];
+    console.log(sum);
 }
